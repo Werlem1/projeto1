@@ -1,0 +1,10 @@
+@charset "UTF-8";
+iframe#frame-specs {
+    width: 650px;
+    margin: auto;
+    height: 300px;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+}

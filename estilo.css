@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'titillium';
+    src: url("../_fonts/titilliumweb-black.ttf");
+}
+
+@font-face {
+    font-family: 'fontelogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    font-family: arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0, 0, 0.1);
+}
+
+div#interface {
+    width: 1190px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0.6);
+    padding: 10px;
+    border: rgba(0, 0, 0, .6);
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1100px;
+    top: 60px;
+}
+
+header#cabecalho {
+    border-bottom: 9px #000000 solid;
+    /* largura, cor, formato da borda */
+    height: 150px;
+    margin: -9px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+    /* Url é o endereço que a imagens vai ter, usada para referenciar a img no css*/
+}
+
+header#cabecalho h1 {
+    font-family: fontelogo, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: titillium, sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+
+/* Formatação de imagens com legendas*/
+
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+    /* box-shadow utilizado para criar efeitos de sombra na imagem. horizontal, vertical, espalhamento e uma cor*/
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+    /*O (.) é a class do html, atraves do ponto, conseguimos formatar no Css.*/
+    /* O hover vai disparar uma class, uma formatação especifica, um efeito especifico, quando você passar o mouse por cima*/
+    opacity: 1;
+}
+
+
+/* Formatação de menu*/
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    /* # é usado quando se usa o id no html. Através da hastag (#) você consegue formatar a sua identificação*/
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 600px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    -ms-transition: background-color 1s
+}
+
+nav#menu li:hover {
+    background-color: #bb6161;
+}
+
+nav#menu li#back {
+    background: #bb6161;
+    border: 1px solid #e7dfdf;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: #494747;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: #e7e1e2;
+    text-decoration: underline;
+}
+
+section#corpo {
+    display: block;
+    width: 600px;
+    float: left;
+    border-right: 5px rgba(0, 0, 0, 6) solid;
+    padding-right: 34px;
+}
+
+section#corpo-full {
+    display: block;
+    width: 1200px;
+    float: left;
+}
+
+article#artigo h2 {
+    font-size: 15pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#artigocabecalho h1 {
+    font-family: fontelogo, sans-serif;
+    font-size: 23pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#artigocabecalho h2 {
+    font-size: 15px;
+    color: #d3caca;
+}
+
+header#artigocabecalho h3 {
+    font-size: 12px;
+    color: #606060;
+}
+
+.direita {
+    text-align: right;
+    font-size: 13px;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+    text-align: right;
+}
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 500px;
+    float: right;
+    background-color: #dddddd;
+    padding: 13px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0.5);
+}
+
+aside#lateral h1 {
+    font-family: fontelogo, sans-serif;
+    font-size: 20px;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+section#cont {
+    width: 1200px;
+    margin: auto;
+    /* Essa configuração faz com que o conteudo fique centralizado na tela idependente do espaço que ele ocupe*/
+}
